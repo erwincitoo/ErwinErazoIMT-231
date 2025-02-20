@@ -6,3 +6,5 @@ Este presente repositorio albergará el contenido de la materia de Programación
 ### Estudiante: Erwin Mijail Erazo Mamani
 
 ### Asignatura: Programación Superior IMT-231 
+
+### Carrera: Ingeniería Biomédica 
