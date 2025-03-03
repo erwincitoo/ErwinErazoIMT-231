@@ -155,7 +155,7 @@ puedan ejecutarlo pero no modificarlo, el comando sería:
 Si un archivo necesita permisos de lectura y escritura para el dueño, el grupo del
 dueño puede leerlo y el resto no puede acceder, el comando sería:
 
-	chmod reporte_admin.pdf
+	chmod 640 reporte_admin.pdf
 
 - Dueño: Lectura (4) + Escritura (2) = 6
 - Grupo: Lectura (4) = 4
