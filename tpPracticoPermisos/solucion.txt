@@ -1,0 +1,93 @@
+# Estudiante: Erwin Mijail Erazo Mamani
+# Asignatura: Programación Superior IMT-231
+# Enlace Repositorio GitHub:
+	 https://github.com/erwincitoo/ErwinErazoIMT-231.git
+
+## Ejercicio 1: Configurar Permisos de Archivos Individuales
+
+### Archivo
+`documento1.txt`
+
+### Contenido
+Escribir sobre el archivo `documento1.txt` informacion del dueño.
+- Nombre completo 
+- version de sistema operativo
+
+### Requisitos
+- El propietario puede leer y escribir.
+- El grupo puede leer.
+- Otros usuarios **NO** pueden acceder.
+
+#### Pregunta
+##### ¿Qué número de permisos aplicarías y qué comando ejecutarías?
+R.- Para cumplir con los requisitos solicitados utilizaria el número de permisos, 640
+tal que, el comando sería:
+
+- Dueño: Lectura (4) + Escritura (2) = 6
+- Grupo: Lectura (4) = 4
+- Otros: Sín Permisos (0) = 0
+
+	chmod 640 documento1.txt
+
+## Ejercicio 2: Hacer un Script Ejecutable
+
+### Archivo
+`script.sh`
+
+### Contenido
+Se debe realizar un script el cual debe pedir al usuario su nombre y responder con un saludo formal mostrando el nombre de entrada y por ultimo que imprima en terminal el contenido del script.sh
+
+### Requisitos
+- El propietario puede leer, escribir y ejecutar.
+- El grupo y otros usuarios pueden solo ejecutarlo.
+
+#### Pregunta
+##### ¿Qué comando aplicarías para asignar estos permisos?
+R.- Para cumplir con los requisitos solicitados utilizaría el número de permisos 711,
+tal que, el comando sería:
+
+- Dueño: Lectura (4) + Escritura (2) + Ejecución (1) = 7
+- Grupo: Ejecución (1) = 1
+- Otros: Ejecución (1) = 1
+
+	chmod 711 script.sh
+
+## Ejercicio 3: Protección de un Archivo de Configuración
+
+### Archivo
+`config.cfg`
+
+### Requisitos
+- Solo el propietario puede leer y escribir.
+- Nadie más debe poder acceder.
+
+#### Pregunta
+##### ¿Qué número de permisos es el adecuado?
+R.- Para cumplir con los requisitos solicitados, el número de permisos adecuados es 600,
+tal que, el comando sería:
+
+- Dueño: Lectura (4) + Escritura (2) = 6
+- Grupo: Sin Permisos (0) = 0
+- Otros: Sin Permisos (0) = 0
+
+	chmod 600 config.cfg
+
+## Ejercicio 4: Archivo Secreto
+
+### Archivo
+`secreto.key`
+
+### Requisitos
+- Solo el propietario puede leerlo.
+- Nadie más debe tener acceso.
+
+#### Pregunta
+##### ¿Qué comando utilizarías para establecer estos permisos?
+R.- Para cumplir con los requisitos solicitados, el número de permisos es 400,
+tal que, el comando sería:
+
+- Dueño: Lectura (4) = 4
+- Grupo: Sin Permisos (0) = 0
+- Otros: Sin Permisos (0) = 0
+	
+	chmod 400 secreto.key
