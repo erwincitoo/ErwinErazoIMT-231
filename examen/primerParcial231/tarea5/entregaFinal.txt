@@ -1,0 +1,23 @@
+[drwxrwxrwx]  .
+├── [-rwxrwxrwx]  readmeExam.md
+├── [-rwxrwxrwx]  readmeExam.pdf
+├── [-rwxrwxrwx]  respuestas.txt
+├── [drwxrwxrwx]  Tarea1
+│   ├── [drwxrwxr-x]  extraFolder
+│   ├── [-rw-rw-r--]  fechaTarea1.txt
+│   └── [-rw-rw-r--]  notesExtra.txt
+├── [drwxrwxrwx]  tarea2
+│   ├── [-rw-rw-r--]  fechaTarea2.txt
+│   └── [-rw-------]  mainConfig.cfg
+├── [drwxrwxrwx]  tarea3
+│   ├── [-rwx--xr--]  basicScript.sh
+│   ├── [-rw-rw-r--]  fechaTarea3.txt
+│   └── [drwxrwxr-x]  ubicaciones
+│       └── [-rw-rw-r--]  ubicacion.txt
+├── [drwxrwxrwx]  tarea4
+│   ├── [-rw-rw-r--]  fechaTarea4.txt
+│   └── [-rwxrwxrwx]  infoDocument.txt
+└── [drwxrwxr-x]  tarea5
+    └── [-rw-rw-r--]  entregaFinal.txt
+
+8 directories, 13 files

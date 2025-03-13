@@ -1,0 +1,196 @@
+Archivo de Respuestas: respuestas.txt
+
+Datos del Estudiante
+- Nombre Completo: Erwin Mijail Erazo Mamani 
+- URL de GitHub de la carpeta del examen: https://github.com/erwincitoo/ErwinErazoIMT-231.git
+
+---
+
+## Tarea 1: Navegación y Creación de Carpetas
+
+- Permiso octal usado para restaurar permiso minimo de la carpeta primerParcial:
+
+Tras la descompresión de la carpeta le asigné los permisos de Lectura (4) + Escritura (2) + Ejecución (1) al dueño,
+al grupo al que pertenece el dueño y al resto de personas, tal que se vería de la siguiente manera:
+	
+	chmod 777 -R primerParcial231
+
+Usé el -R para que se le asigne el mismo permiso a todas las carpetas y archivos dentro de su interior.
+
+- Comandos usados y justificaciones :
+
+1. Tras asignar todos los permisos necesarios, ingresé al directorio descomprimido mediante:
+	cd primerParcial231
+
+2. Posteriormente a ello, he creado la carpeta solicitada de Tarea1:
+	mkdir Tarea1
+
+3. Me redirigí a su interior de esa carpeta Tarea1 creada recientemente usando:
+	cd Tarea1
+
+4. Tras encontrarme en el interior de Tarea1, creé la nueva subcarpeta solicitada:
+	mkdir extraFolder
+
+5. Me dirigí al interior de dicha subcarpeta:
+	cd extraFolder
+
+6. En su interior de ella, creé dos archivos, el solicitado y el de la fecha:
+	touch notesExtra.txt
+	touch fechaTarea1.txt
+
+7. Para asignar la fecha actual en fechaTarea1.txt usé el siguiente comando:
+	date > fechaTarea1.txt
+
+
+---
+
+## Tarea 2: Permisos en Formato Octal
+- Permiso octal usado para esta tarea :
+
+En el requisito usado para esta tarea era que solo el propietario pueda leer y escribir,
+el grupo y el resto de personas no pueden hacer nada, entonces usé el siguiente permiso:
+
+Lectura (4) + Escritura (2) para el dueño, para el grupo  y para el resto 0, entonces:
+	chmod 600 mainConfig.cfg
+
+- Comandos usados y justificaciones :
+
+1. Me dirigí a la carpeta de Tarea2 con:
+	cd tarea2
+
+2. Creé el archivo de fechaTarea2 para registrar la fecha actual, de la siguiente manera:
+	touch fechaTarea2.txt
+
+3. Le asigné la fecha actual a dicho archivo creado:
+	date > fechaTarea2.txt
+
+4. Le agrgué contenido al archivo mainConfig.cfg utilizando:
+	nano mainConfig.cfg
+
+5. Adentro del editor completé las lineas de texto solicitadas, en mi caso
+utilicé la información ficticia del examen de simulación, y un texto diciendo hola.
+
+
+
+---
+## Tarea 3: Scripting Básico 
+- Permiso octal usado para el `basicScript.sh`: 
+El requisito solicitado fue que el script deba solo ejecutarse por el propietario y el grupo,
+otros usuarios pueden leerlo, pero no ejecutarlo, entonces: 
+
+	chmod 714 basicScript.sh
+
+Porque Lectura (4) + Escritura (2) + Ejecución (1) = 7 Para el dueño
+	Ejecución (1) = 1 Para el grupo
+	Lectura (4) = 4 Para otras personas
+
+- Comandos usados y justificaciones :
+
+1. Me dirigí a la carpeta de tarea3:
+	cd tarea3
+
+2. Creé el archivo de fechaTare32 para registrar la fecha actual, de la siguiente>
+        touch fechaTarea3.txt
+
+3. Ingresé  basicScript.sh mediante el editor de texto:
+	nano basicScript.sh
+
+4. Le asigné la linea de código de inicialización del script:
+	#!/bin/bash 
+
+5. Dentro del script, usé las siguientes lineas de código para realizar lo solicitado:
+	echo "¡Bienvenido al Script del Examen!"
+	echo "Ingresa por favor tu nombre:"
+	read nombre
+	echo "Hola, $nombre. Un gusto saludarte"
+	mkdir ubicaciones
+	cd ubicaciones
+	touch ubicacion.txt
+	pwd > ubicacion.txt
+	cd ..
+	date >  fechaTarea3.txt
+
+6. Lo ejecuté el script para ver que funcionase correctamente:
+	./basicScript.sh
+
+
+---
+## Tarea 4: Edición con nano o vim 
+
+- para que usamos el comando `cat` ?:
+El comando cat se usa para imprimir en pantalla todas las lineas de un archivo,
+sin la necesidad de ingresar a este, tiene sus variaciones para numerar todas las lineas, o solo las lineas que contengan texto.
+  
+- Comandos usados y justificaciones :
+
+1. Me dirigí a la carpeta Tarea 4:
+	cd tarea4
+
+2. Creé el archivo de fechaTarea4 para registrar la fecha actual, de la siguiente>
+        touch fechaTarea4.txt
+
+3. Le asigné la fecha actual a dicho archivo creado:
+        date > fechaTarea4.txt
+
+4. En mi terminal ejecuté los comandos de los requisitos de edición solicitados:
+	date  
+	whoami
+	uname -r
+	cat /etc/os-release
+
+- El date nos brinda la fecha actual.
+- El whoami el nombre de usuario de nuestro dispositivo.
+- El uname -r la versión de kernel
+- El cat /etc/os-release nos brinda los datos de nuestro sistema operativo,
+de ahí solo copié el PRETTY_NAME
+
+5. Ingresé al documento y escribí un comentario personal dentro del infoDocument.txt
+	nano infoDocument.txt
+
+6. Guardé los cambios con Ctrl+X y escribí "s" para aceptar los cambios
+
+7. Verifiqué que todo el contenido esté en orden con:
+	cat infoDocument.txt
+
+---
+## Tarea 5: Final
+
+- para que usamos el comando `tree -p` y para que su argumento `-p` ?:
+
+El comando tree -p es para ver de una manera más atractiva visual el listado de las carpetas y el contenido en su interior.
+Antes de ejecutarlo, primeramente debemos tener instalado el tree, el cual se hace con:
+	sudo apt install tree
+
+Una vez instalado, lo podemos ejecutar en terminal.
+El -p es un argumento, que especifica que se van a mostrar entre corchetes los permisos de toda nuestra raíz o listado en este caso.
+ 
+- Permiso octal para `entregaFinal.txt`: 
+
+Los requerimentos solicitados para este archivo es que solo se pueda leer y o ejecutar,
+entonces, usé (4) Lectura para el dueño, grupo y otros usuarios:
+	chmod 444 entregaFinal.txt
+
+- Comandos usados y justificaciones :
+
+1. Creé la carpeta tarea5 solicitada:
+	mkdir tarea5
+
+2. Ingresé a la carpeta creada:
+	cd tarea5
+
+3. Dentro de ella creé el archivo solicitado:
+	touch entregaFInal.txt
+
+4. Me dirigí hasta la carpeta más grande de todo el archivo descomprimido:
+	cd ..
+
+5. Ejecuté el siguiente comando para alojar la salida del tree desde ese punto,
+al archivo de entregaFinal.txt
+	tree -p > /home/erwin-mijail-erazo-mamani/UCB2025/ErwinErazoIMT-231/examen/primerParcial231/tarea5/entregaFinal.txt	
+
+6. Le cambié los permisos solicitados despues de la escritura:
+	chmod 444 entregaFinal.txt
+	chmod 555 respuestas.txt
+
+Porque para entregaFinal.txt (4) Lectura brinda los permisos de lectura  para dueño, grupo y resto de personas.
+Porque para respuestas.txt (4) Lectura + 1 (Ejecución) brinda los permisos de lectura y ejecución para dueño, grupo y resto de personas. 

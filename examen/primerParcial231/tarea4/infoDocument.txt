@@ -1,0 +1,6 @@
+1. Fecha y hora actual: jue 13 mar 2025 11:43:33 -04
+2. Nombre de usuario: erwin-mijail-erazo-mamani
+3. Versión del kernel: 6.11.0-19-generic 
+4. Distribución de Linux: Ubuntu 24.04.1 LTS
+5. Comentario personal: Este es mi documento de la Tarea 4
+
